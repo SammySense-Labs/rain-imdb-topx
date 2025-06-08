@@ -4,51 +4,30 @@ A Next.js application that displays the top 10 movies from IMDb with the highest
 
 ## Tech Stack
 
-- Next.js 14
-- TypeScript
-- Tailwind CSS
-- React Query
-- Jest + React Testing Library
-- Playwright
+- [Next.js](https://nextjs.org/blog/next-14)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/docs/installation/using-postcss)
+- [TMDB API](https://www.themoviedb.org/settings/api)
 
 ## Getting Started
 
-1. Clone the repository
+1. Clone the repository:
+   ```
+   git clone smth
+   ```
 2. Install dependencies:
    ```bash
    npm install
    ```
-3. Create a `.env.local` file in the root directory and add your TMDB API key:
+3. Create `.env.local` (e.g. by using `.env.example`) and fill in the necessary values:
    ```
-   NEXT_PUBLIC_TMDB_API_KEY=your_api_key_here
+   cp .env.example .env.local
    ```
 4. Run the development server:
    ```bash
    npm run dev
    ```
 5. Open [http://localhost:3000](http://localhost:3000) in your browser
-
-## Testing
-
-### Unit Tests
-```bash
-npm test
-```
-
-### Watch Mode
-```bash
-npm run test:watch
-```
-
-### End-to-End Tests
-```bash
-npm run test:e2e
-```
-
-### End-to-End Tests with UI
-```bash
-npm run test:e2e:ui
-```
 
 ## Project Structure
 
@@ -60,8 +39,7 @@ src/
 │       └── [id]/       # Dynamic movie detail pages
 ├── components/         # React components
 ├── lib/               # Utility functions and API clients
-└── __tests__/        # Unit tests
-e2e/                  # End-to-end tests
+└── interfaces/        # TypeScript interfaces
 ```
 
 ## Features
@@ -70,4 +48,3 @@ e2e/                  # End-to-end tests
 - Movie detail pages
 - Responsive design
 - Client-side data fetching
-- Server-side data fetching (optional implementation)
