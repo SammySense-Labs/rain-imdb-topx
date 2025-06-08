@@ -1,4 +1,4 @@
-# IMDb Top Movies Viewer
+# IMDb Top Movies Viewer 🎞️
 
 A Next.js application that displays the top 10 movies from IMDb with the highest scores. Each movie can be clicked to view its details.
 
@@ -13,7 +13,7 @@ A Next.js application that displays the top 10 movies from IMDb with the highest
 
 1. Clone the repository:
    ```
-   git clone smth
+   git clone git@github.com:SammySense-Labs/rain-imdb-topx.git
    ```
 2. Install dependencies:
    ```bash
@@ -45,6 +45,7 @@ src/
 ## Features
 
 - Display top 10 movies from IMDb
-- Movie detail pages
+- Provide a detail page to each of the top movies
 - Responsive design
 - Client-side data fetching
+- Focus on DX, code quality and readability
