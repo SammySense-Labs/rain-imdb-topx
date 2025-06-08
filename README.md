@@ -8,6 +8,7 @@ A Next.js application that displays the top 10 movies from IMDb with the highest
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/docs/installation/using-postcss)
 - [TMDB API](https://www.themoviedb.org/settings/api)
+- [Playwright](https://playwright.dev/) for e2e testing
 
 ## Getting Started
 
@@ -29,6 +30,13 @@ A Next.js application that displays the top 10 movies from IMDb with the highest
    ```
 5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
+## Testing
+
+Run e2e tests with Playwright:
+```bash
+npm run test:e2e
+```
+
 ## Project Structure
 
 ```
@@ -39,7 +47,9 @@ src/
 │       └── [id]/       # Dynamic movie detail pages
 ├── components/         # React components
 ├── lib/               # Utility functions and API clients
-└── interfaces/        # TypeScript interfaces
+├── interfaces/        # TypeScript interfaces
+└── tests/            # End-to-end tests
+    └── e2e/          # Playwright test files
 ```
 
 ## Features
@@ -48,4 +58,14 @@ src/
 - Provide a detail page to each of the top movies
 - Responsive design
 - Client-side data fetching
-- Focus on DX, code quality and readability
+- E2E testing with Playwright
+
+## Technical Decisions and Trade-offs
+
+### Architecture
+- **Next.js**: Chosen as it provides the best balance of features (e.g. file-system based routing makes it easier to create movie detail pages), developer experience, and performance for this challenge. Another alternative with much faster DX and simpler setup would be "Vite + React".
+- **Client-side Data Fetching**: Implemented for immediate user feedback, though this means we don't benefit from Next.js's static generation capabilities.
+- **TypeScript**: Added for type safety and better developer experience, despite the initial setup overhead.
+
+### API Integration
+- **TMDB API**: Selected over direct IMDb API due to better documentation and reliability, though this means we're not using the official IMDb data source.
