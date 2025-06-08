@@ -30,7 +30,7 @@ export type Movie = {
   };
   original_language?: string;
   production_countries?: { iso_3166_1: string; name: string }[];
-  spoken_languages?: { iso_639_1: string; name: string }[];
+  spoken_languages?: { iso_639_1: string; english_name: string }[];
   budget?: number;
   revenue?: number;
 };
