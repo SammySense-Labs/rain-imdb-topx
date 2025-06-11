@@ -11,6 +11,7 @@ A Next.js application that displays the top 10 movies from IMDb with the highest
 - [Playwright](https://playwright.dev/) for e2e testing
 - [GraphQL](https://graphql.org/)
 - [Apollo Server](https://www.apollographql.com/docs/apollo-server)
+- [Docker](https://github.com/docker) and [Docker Compose](https://docs.docker.com/compose/install/)
 
 ## Getting Started
 
@@ -31,6 +32,16 @@ A Next.js application that displays the top 10 movies from IMDb with the highest
    npm run dev
    ```
 5. Open [http://localhost:3000](http://localhost:3000) in your browser
+6. Install and run PostgreSQL using [Docker Compose](./docker-compose.yml):
+```bash
+docker compose up -d
+```
+7. You can connect to it using any PostgreSQL client with these connection details:
+- `Host: localhost`
+- `Port: 5434`
+- `Database: rain_imdb`
+- `Username: rain_user`
+- `Password: rain_password`
 
 ## Testing
 
