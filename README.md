@@ -9,6 +9,8 @@ A Next.js application that displays the top 10 movies from IMDb with the highest
 - [Tailwind CSS](https://tailwindcss.com/docs/installation/using-postcss)
 - [TMDB API](https://www.themoviedb.org/settings/api)
 - [Playwright](https://playwright.dev/) for e2e testing
+- [GraphQL](https://graphql.org/)
+- [Apollo Server](https://www.apollographql.com/docs/apollo-server)
 
 ## Getting Started
 
@@ -69,3 +71,52 @@ src/
 
 ### API Integration
 - **TMDB API**: Selected over direct IMDb API due to better documentation and reliability, though this means we're not using the official IMDb data source.
+
+## GraphQL API
+
+### Open the GraphQL playground to test the API
+
+1. Starting your development server:
+```bash
+npm run dev
+```
+2. Open [http://localhost:3000/api/graphql](http://localhost:3000/api/graphql) in your browser
+3. Use this example query:
+```graphql
+query {
+  movies {
+    id
+    title
+    year
+    rating
+    director
+  }
+}
+```
+You should get this response:
+```json
+{
+  "data": {
+    "movies": [
+      {
+        "id": "1",
+        "title": "The Shawshank Redemption",
+        "year": 1994,
+        "rating": 9.3,
+        "director": "Frank Darabont"
+      },
+      {
+        "id": "2",
+        "title": "The Godfather",
+        "year": 1972,
+        "rating": 9.2,
+        "director": "Francis Ford Coppola"
+      }
+    ]
+  }
+}
+```
+
+### GraphQL API endpoints
+
+_TBD_
