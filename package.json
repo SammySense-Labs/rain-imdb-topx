@@ -10,7 +10,15 @@
     "test:e2e": "playwright test"
   },
   "dependencies": {
+    "@apollo/server": "^4.12.2",
+    "@as-integrations/next": "^3.2.0",
+    "@graphql-codegen/cli": "^5.0.7",
+    "@graphql-codegen/typescript": "^4.1.6",
+    "@graphql-codegen/typescript-operations": "^4.6.1",
+    "@graphql-codegen/typescript-resolvers": "^4.5.1",
     "geist": "^1.4.2",
+    "graphql": "^16.11.0",
+    "graphql-tag": "^2.12.6",
     "next": "14.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
